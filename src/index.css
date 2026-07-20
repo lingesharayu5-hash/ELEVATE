@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-heading: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-nav: "Afacad", sans-serif;
+
+  /* Colors */
+  --color-background: #001025;
+  --color-primary: #70A2E1;
+  --color-gray: #ABA6A6;
+  --color-white: #FFFFFF;
+  --color-black: #111111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  font-family: var(--font-body);
+}
