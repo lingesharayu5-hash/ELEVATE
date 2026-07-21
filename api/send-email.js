@@ -21,7 +21,7 @@ export default async function handler(req, res) {
     } = req.body;
 
     const adminEmail = await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "Elevate <hello@elevate81.com>",
       to: ["lingesharayu5@gmail.com"], // Replace with your email
       subject: `🚀 New Inquiry from ${fullName}`,
       html: `
@@ -39,7 +39,7 @@ export default async function handler(req, res) {
 
     console.log("Customer email:", email);
     const clientEmail = await resend.emails.send({
-  from: "onboarding@resend.dev",
+ from: "Elevate <hello@elevate81.com>",
   to: [email],
   subject: "Thank you for contacting Elevate 🚀",
   html: `
