@@ -36,7 +36,7 @@ export default async function handler(req, res) {
         <p><strong>Services:</strong> ${services.join(", ")}</p>
       `,
     });
-    
+
     console.log("Customer email:", email);
     const clientEmail = await resend.emails.send({
   from: "onboarding@resend.dev",
@@ -66,7 +66,7 @@ export default async function handler(req, res) {
     </div>
   `,
 });
-console.log("Client email response:", clientEmail);
+console.log("Client email error:", clientEmail.error);
 
     return res.status(200).json(adminEmail);
   } catch (error) {
