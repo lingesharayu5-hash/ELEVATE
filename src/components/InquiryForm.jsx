@@ -133,6 +133,25 @@ setIsSubmitting(true);
   setIsSubmitting(false);
   return;
 }
+const emailResponse = await fetch("/api/send-email", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    fullName: formData.fullName,
+    businessName: formData.businessName,
+    email: formData.email,
+    phone: formData.phone,
+    businessType: formData.businessType,
+    monthlyBudget: formData.monthlyBudget,
+    services: selectedServices,
+  }),
+});
+
+if (!emailResponse.ok) {
+  console.error("Email failed to send");
+}
 
 setSubmitSuccess(true);
 setFormData({
