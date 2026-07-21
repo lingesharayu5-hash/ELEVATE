@@ -36,7 +36,7 @@ export default async function handler(req, res) {
         <p><strong>Services:</strong> ${services.join(", ")}</p>
       `,
     });
-    await resend.emails.send({
+    const clientEmail = await resend.emails.send({
   from: "onboarding@resend.dev",
   to: [email],
   subject: "Thank you for contacting Elevate 🚀",
@@ -64,6 +64,7 @@ export default async function handler(req, res) {
     </div>
   `,
 });
+console.log("Client email response:", clientEmail);
 
     return res.status(200).json(adminEmail);
   } catch (error) {
