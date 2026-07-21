@@ -65,7 +65,7 @@ export default async function handler(req, res) {
   `,
 });
 
-    return res.status(200).json(data);
+    return res.status(200).json(adminEmail);
   } catch (error) {
     console.error(error);
 
