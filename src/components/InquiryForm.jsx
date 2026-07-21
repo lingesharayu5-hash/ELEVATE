@@ -133,6 +133,8 @@ setIsSubmitting(true);
   setIsSubmitting(false);
   return;
 }
+console.log("Calling email API...");
+
 const emailResponse = await fetch("/api/send-email", {
   method: "POST",
   headers: {
@@ -148,6 +150,10 @@ const emailResponse = await fetch("/api/send-email", {
     services: selectedServices,
   }),
 });
+console.log("Status:", emailResponse.status);
+
+const responseBody = await emailResponse.text();
+console.log("Response:", responseBody);
 
 if (!emailResponse.ok) {
   console.error("Email failed to send");
