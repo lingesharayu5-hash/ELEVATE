@@ -133,7 +133,7 @@ setIsSubmitting(true);
   setIsSubmitting(false);
   return;
 }
-console.log("Calling email API...");
+alert("Calling email API...");
 
 const emailResponse = await fetch("/api/send-email", {
   method: "POST",
