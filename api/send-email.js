@@ -20,7 +20,7 @@ export default async function handler(req, res) {
       services,
     } = req.body;
 
-    const data = await resend.emails.send({
+    const adminEmail = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: ["lingesharayu5@gmail.com"], // Replace with your email
       subject: `🚀 New Inquiry from ${fullName}`,
@@ -36,6 +36,34 @@ export default async function handler(req, res) {
         <p><strong>Services:</strong> ${services.join(", ")}</p>
       `,
     });
+    await resend.emails.send({
+  from: "onboarding@resend.dev",
+  to: [email],
+  subject: "Thank you for contacting Elevate 🚀",
+  html: `
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto;">
+      <h2>Thank you, ${fullName}! 👋</h2>
+
+      <p>We have successfully received your inquiry.</p>
+
+      <p>Our team will review your requirements and get back to you as soon as possible.</p>
+
+      <hr>
+
+      <p><strong>Your submitted details:</strong></p>
+
+      <ul>
+        <li><strong>Business:</strong> ${businessName}</li>
+        <li><strong>Email:</strong> ${email}</li>
+        <li><strong>Phone:</strong> ${phone}</li>
+      </ul>
+
+      <p>We appreciate your interest in <strong>Elevate</strong>.</p>
+
+      <p>Have a wonderful day! 🚀</p>
+    </div>
+  `,
+});
 
     return res.status(200).json(data);
   } catch (error) {
