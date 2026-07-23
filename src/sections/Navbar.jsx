@@ -42,14 +42,14 @@ export default function Navbar({ onOpenInquiry }) {
     <header className=" fixed top-0 left-0 w-full z-50 h-[78px] bg-white px-6 md:px-12 xl:px-[110px]">
       <nav
         aria-label="Primary navigation"
-        className="mx-auto grid h-full max-w-[1220px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]"
+        className="mx-auto grid h-full max-w-[1220px] grid-cols-[minmax(0,1fr)_40px] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]"
       >
-        <a href="/" aria-label="Elevate home" className="justify-self-start">
-          <span className="flex h-[44px] items-center">
+        <a href="/" aria-label="Elevate home"  className="justify-self-start min-w-0">
+          <span className="flex h-[44px] items-center min-w-0">
             <img
               src={logoIcon}
               alt=""
-              className="mr-[7px] h-[33.401px] w-[19.381px]"
+              className="mr-[7px] h-[34.401px] w-[19.381px]"
             />
             <img src={logoText} alt="Elevate" className="h-[44px] w-auto" />
           </span>
@@ -89,7 +89,7 @@ export default function Navbar({ onOpenInquiry }) {
           aria-label="Open navigation menu"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen(true)}
-          className="flex size-10 flex-col items-center justify-center gap-1.5 rounded-md text-black transition-colors duration-[250ms] hover:text-[#70A2E1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#70A2E1] lg:hidden"
+          className="justify-self-end flex size-10 flex-col items-center justify-center gap-1.5 rounded-md text-black transition-colors duration-[250ms] hover:text-[#70A2E1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#70A2E1] lg:hidden"
         >
           <span className="h-0.5 w-6 bg-current" />
           <span className="h-0.5 w-6 bg-current" />

@@ -202,7 +202,7 @@ return () => {
 };
   }, []);
   return (
-    <section id="about" ref={sectionRef} className="bg-[#001025] px-6 md:px-10" >
+    <section id="about" ref={sectionRef} className="overflow-hidden bg-[#001025] px-6 md:px-10" >
       <div className="mx-auto grid min-h-[969px] max-w-[1440px] grid-cols-1 px-0 py-20 lg:grid-cols-[673px_579px] lg:px-[95px] lg:py-[105px]">
         <div
           ref={textRef}

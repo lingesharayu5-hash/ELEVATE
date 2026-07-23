@@ -340,11 +340,11 @@ setIsSubmitting(false);
   </div>
 </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-end pt-2">
+          <div className="flex flex-col gap-1.5">
             <div className="flex flex-col gap-1.5 -mt-2">
               <label className="font-inter font-light text-[14px] leading-[17px] text-[#FFFFFF]">*Monthly budget</label>
 
-  <div className="relative  w-[325px]">
+  <div className="relative  w-full">
     <select
       value={formData.monthlyBudget}
       onChange={(e) =>

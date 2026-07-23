@@ -709,7 +709,7 @@ function Services() {
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="min-h-[500vh] bg-[#001025]">
+    <section id="services" ref={sectionRef} className="bg-[#001025] lg:min-h-[500vh]">
       <div className="sticky top-0 hidden h-screen overflow-hidden lg:block">
         <div className="mx-auto h-full max-w-[1440px]">
           <p className="pt-[52px] text-center font-['Afacad'] text-[40px] font-bold leading-normal text-[#BCBCBC]">
